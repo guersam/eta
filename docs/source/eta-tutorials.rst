@@ -754,7 +754,7 @@ Problem Resolution
 
 The problematic code above can now be fixed::
 
-  {-# LANGUAGE TypeFamilies, DataKinds, FlexibleContexts #-}
+  {-# LANGUAGE TypeFamilies, DataKinds, FlexibleContexts, TypeOperators #-}
 
   foreign import java unsafe toString :: (a <: Object) => a -> String
 
@@ -771,7 +771,7 @@ The problematic code above can now be fixed::
 
 We can even change the code above to use the `Java` monad::
 
-  {-# LANGUAGE TypeFamilies, DataKinds, FlexibleContexts #-}
+  {-# LANGUAGE TypeFamilies, DataKinds, FlexibleContexts, TypeOperators #-}
 
   foreign import java unsafe toString :: (a <: Object) => Java a String
 
@@ -1286,7 +1286,7 @@ changes:
 
    .. code::
 
-      {-# LANGUAGE MagicHash, FlexibleContexts, DataKinds, TypeFamilies #-}
+      {-# LANGUAGE MagicHash, FlexibleContexts, DataKinds, TypeFamilies, TypeOperators #-}
 
       import Java
 
